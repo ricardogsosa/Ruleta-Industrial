@@ -1,0 +1,82 @@
+{
+  "Andrea": [
+    "Historia P1", "Historia P2", "Historia P3", "Historia P4", "Historia P5",
+    "Historia P6", "Historia P7", "Historia P8", "Historia P9", "Historia P10",
+    "Historia P11", "Historia P12", "Historia P13", "Historia P14", "Historia P15",
+    "Historia P16", "Historia P17", "Historia P18", "Historia P19", "Historia P20",
+    "Historia P21", "Historia P22", "Historia P23", "Historia P24", "Historia P25",
+    "Historia P26", "Historia P27", "Historia P28", "Historia P29", "Historia P30"
+  ],
+  "Cabeje": [
+    "Deportes P1", "Deportes P2", "Deportes P3", "Deportes P4", "Deportes P5",
+    "Deportes P6", "Deportes P7", "Deportes P8", "Deportes P9", "Deportes P10",
+    "Deportes P11", "Deportes P12", "Deportes P13", "Deportes P14", "Deportes P15",
+    "Deportes P16", "Deportes P17", "Deportes P18", "Deportes P19", "Deportes P20",
+    "Deportes P21", "Deportes P22", "Deportes P23", "Deportes P24", "Deportes P25",
+    "Deportes P26", "Deportes P27", "Deportes P28", "Deportes P29", "Deportes P30"
+  ],
+  "Perro": [
+    "Ciencia P1", "Ciencia P2", "Ciencia P3", "Ciencia P4", "Ciencia P5",
+    "Ciencia P6", "Ciencia P7", "Ciencia P8", "Ciencia P9", "Ciencia P10",
+    "Ciencia P11", "Ciencia P12", "Ciencia P13", "Ciencia P14", "Ciencia P15",
+    "Ciencia P16", "Ciencia P17", "Ciencia P18", "Ciencia P19", "Ciencia P20",
+    "Ciencia P21", "Ciencia P22", "Ciencia P23", "Ciencia P24", "Ciencia P25",
+    "Ciencia P26", "Ciencia P27", "Ciencia P28", "Ciencia P29", "Ciencia P30"
+  ],
+  "Arte": [
+    "Arte P1", "Arte P2", "Arte P3", "Arte P4", "Arte P5",
+    "Arte P6", "Arte P7", "Arte P8", "Arte P9", "Arte P10",
+    "Arte P11", "Arte P12", "Arte P13", "Arte P14", "Arte P15",
+    "Arte P16", "Arte P17", "Arte P18", "Arte P19", "Arte P20",
+    "Arte P21", "Arte P22", "Arte P23", "Arte P24", "Arte P25",
+    "Arte P26", "Arte P27", "Arte P28", "Arte P29", "Arte P30"
+  ],
+  "Matemáticas": [
+    "Matemáticas P1", "Matemáticas P2", "Matemáticas P3", "Matemáticas P4", "Matemáticas P5",
+    "Matemáticas P6", "Matemáticas P7", "Matemáticas P8", "Matemáticas P9", "Matemáticas P10",
+    "Matemáticas P11", "Matemáticas P12", "Matemáticas P13", "Matemáticas P14", "Matemáticas P15",
+    "Matemáticas P16", "Matemáticas P17", "Matemáticas P18", "Matemáticas P19", "Matemáticas P20",
+    "Matemáticas P21", "Matemáticas P22", "Matemáticas P23", "Matemáticas P24", "Matemáticas P25",
+    "Matemáticas P26", "Matemáticas P27", "Matemáticas P28", "Matemáticas P29", "Matemáticas P30"
+  ],
+  "Literatura": [
+    "Literatura P1", "Literatura P2", "Literatura P3", "Literatura P4", "Literatura P5",
+    "Literatura P6", "Literatura P7", "Literatura P8", "Literatura P9", "Literatura P10",
+    "Literatura P11", "Literatura P12", "Literatura P13", "Literatura P14", "Literatura P15",
+    "Literatura P16", "Literatura P17", "Literatura P18", "Literatura P19", "Literatura P20",
+    "Literatura P21", "Literatura P22", "Literatura P23", "Literatura P24", "Literatura P25",
+    "Literatura P26", "Literatura P27", "Literatura P28", "Literatura P29", "Literatura P30"
+  ],
+  "Geografía": [
+    "Geografía P1", "Geografía P2", "Geografía P3", "Geografía P4", "Geografía P5",
+    "Geografía P6", "Geografía P7", "Geografía P8", "Geografía P9", "Geografía P10",
+    "Geografía P11", "Geografía P12", "Geografía P13", "Geografía P14", "Geografía P15",
+    "Geografía P16", "Geografía P17", "Geografía P18", "Geografía P19", "Geografía P20",
+    "Geografía P21", "Geografía P22", "Geografía P23", "Geografía P24", "Geografía P25",
+    "Geografía P26", "Geografía P27", "Geografía P28", "Geografía P29", "Geografía P30"
+  ],
+  "Música": [
+    "Música P1", "Música P2", "Música P3", "Música P4", "Música P5",
+    "Música P6", "Música P7", "Música P8", "Música P9", "Música P10",
+    "Música P11", "Música P12", "Música P13", "Música P14", "Música P15",
+    "Música P16", "Música P17", "Música P18", "Música P19", "Música P20",
+    "Música P21", "Música P22", "Música P23", "Música P24", "Música P25",
+    "Música P26", "Música P27", "Música P28", "Música P29", "Música P30"
+  ],
+  "Tecnología": [
+    "Tecnología P1", "Tecnología P2", "Tecnología P3", "Tecnología P4", "Tecnología P5",
+    "Tecnología P6", "Tecnología P7", "Tecnología P8", "Tecnología P9", "Tecnología P10",
+    "Tecnología P11", "Tecnología P12", "Tecnología P13", "Tecnología P14", "Tecnología P15",
+    "Tecnología P16", "Tecnología P17", "Tecnología P18", "Tecnología P19", "Tecnología P20",
+    "Tecnología P21", "Tecnología P22", "Tecnología P23", "Tecnología P24", "Tecnología P25",
+    "Tecnología P26", "Tecnología P27", "Tecnología P28", "Tecnología P29", "Tecnología P30"
+  ],
+  "Filosofía": [
+    "Filosofía P1", "Filosofía P2", "Filosofía P3", "Filosofía P4", "Filosofía P5",
+    "Filosofía P6", "Filosofía P7", "Filosofía P8", "Filosofía P9", "Filosofía P10",
+    "Filosofía P11", "Filosofía P12", "Filosofía P13", "Filosofía P14", "Filosofía P15",
+    "Filosofía P16", "Filosofía P17", "Filosofía P18", "Filosofía P19", "Filosofía P20",
+    "Filosofía P21", "Filosofía P22", "Filosofía P23", "Filosofía P24", "Filosofía P25",
+    "Filosofía P26", "Filosofía P27", "Filosofía P28", "Filosofía P29", "Filosofía P30"
+  ]
+}

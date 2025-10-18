@@ -1,0 +1,344 @@
+/* ===============================
+   PALETA DE COLORES PRINCIPAL
+   =============================== */
+:root {
+  --primary: #8a1329;
+  --secondary: #116e55;
+  --bg-dark: #0a0a0f;
+  --text: #ffffff;
+}
+
+/* ===============================
+   ESTILO GENERAL DEL CUERPO
+   =============================== */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) #1c1c1c;
+}
+
+/* Scrollbar Webkit */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: #1c1c1c;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 6px;
+}
+
+/* ===============================
+   TÍTULO
+   =============================== */
+.titulo {
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary);
+  margin: 25px 0 80px 0;
+  text-align: center;
+  font-size: 3em;
+}
+
+/* ===============================
+   LAYOUT PRINCIPAL
+   =============================== */
+.main-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 150%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   PANEL IZQUIERDO
+   =============================== */
+.left-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 20px;
+  position: relative;
+}
+
+/* ===============================
+   CONTENEDOR DE RULETA + BOTONES
+   =============================== */
+.wheel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  width: 100%;
+  transform: translateX(75px);
+}
+
+/* ===============================
+   BOTONES LATERALES A LA IZQUIERDA
+   =============================== */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  position: absolute;
+  left: -200px;
+  top: 35%;
+  transform: translateY(-50%);
+}
+
+.spin-btn,
+.reset-btn,
+.next-btn {
+  background: var(--primary);
+  color: var(--text);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: all 0.2s ease-in-out;
+  width: 160px;
+  text-align: center;
+}
+
+.spin-btn:hover,
+.reset-btn:hover,
+.next-btn:hover {
+  transform: scale(1.05);
+  background: var(--secondary);
+}
+
+/* ===============================
+   RULETA
+   =============================== */
+canvas {
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.pointer {
+  position: absolute;
+  top: -15px;
+  left: 49%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 30px solid var(--secondary);
+  filter: drop-shadow(0 6px 18px rgba(255, 77, 109, 0.35));
+  z-index: 3;
+}
+
+/* ===============================
+   INFO (debajo de la ruleta)
+   =============================== */
+.info {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5em;
+  transform: translateX(75px);
+}
+
+.category {
+  font-size: 1.6em;
+  color: var(--secondary);
+  margin-top: 10px;
+  text-shadow: 0 0 8px var(--secondary);
+}
+
+.question {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.counter {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* ===============================
+   PANEL DERECHO
+   =============================== */
+.right-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+
+.summary {
+  text-align: center;
+}
+
+.summary h3 {
+  color: var(--secondary);
+  margin-bottom: 10px;
+  font-size: 2em;
+  transform: translateX(55px);
+}
+
+.summary div {
+  font-size: 1.5em;
+  line-height: 1.8;
+  transform: translateX(55px);
+}
+
+/* ===============================
+   MODAL
+   =============================== */
+.big-result {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 26, 0.9);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.big-result.show {
+  display: flex;
+}
+
+.big-result h1 {
+  color: var(--secondary);
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.big-result p {
+  font-size: 40px;
+  margin-bottom: 600px;
+  text-align: center;
+  max-width: 80%;
+}
+
+.big-result button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.big-result button:hover {
+  background: var(--secondary);
+  transform: scale(1.05);
+}
+
+/* ===============================
+   📱 RESPONSIVE DESIGN
+   =============================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .main-layout {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .buttons {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    transform: none;
+  }
+
+  .wheel-container {
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .info {
+    transform: none;
+    margin-top: 40px;
+    font-size: 1.2em;
+  }
+
+  .summary h3,
+  .summary div {
+    transform: none;
+  }
+
+  .titulo {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .spin-btn,
+  .reset-btn,
+  .next-btn {
+    width: 80%;
+    font-size: 1.1em;
+    padding: 10px 20px;
+  }
+
+  .wheel-container canvas {
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+  .info {
+    margin-top: 20px;
+    font-size: 1.1em;
+  }
+
+  .summary {
+    margin-top: 40px;
+  }
+
+  .summary h3 {
+    font-size: 1.6em;
+  }
+
+  .summary div {
+    font-size: 1.1em;
+  }
+}
