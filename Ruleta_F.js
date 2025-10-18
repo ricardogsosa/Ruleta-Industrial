@@ -114,10 +114,21 @@ function spinWheel() {
       requestAnimationFrame(anim);
     } else {
       spinning = false;
-      const actualAngle = finalAngle % (2 * Math.PI);
-      const targetAngle = (2 * Math.PI - actualAngle) % (2 * Math.PI);
-      const idx = Math.floor(targetAngle / angle) % num;
-      showQ(idx); // Muestra pregunta de la categoría ganadora
+ const actualAngle = finalAngle % (2 * Math.PI);
+
+// 🔹 La flecha está ARRIBA (12 en punto), pero actualmente toma el de ABAJO.
+// Por eso giramos la referencia 180° (Math.PI)
+const pointerAngle = -Math.PI / 2; // posición arriba
+
+// 🔹 Calculamos qué sector quedó bajo la flecha
+const adjusted = (pointerAngle - actualAngle + 2 * Math.PI) % (2 * Math.PI);
+
+// 🔹 Determinamos el índice correcto del sector ganador
+const idx = Math.floor(adjusted / angle) % num;
+
+// 🔹 Mostramos la pregunta de esa categoría
+showQ(idx);
+// Muestra pregunta de la categoría ganadora
     }
   }
   requestAnimationFrame(anim);
