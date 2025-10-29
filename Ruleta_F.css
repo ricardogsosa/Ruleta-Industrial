@@ -84,7 +84,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   margin-bottom: 25px;
   width: 100%;
-  transform: translateX(75px);
+  transform: translateX(200px);
 }
 
 /* ===============================
@@ -97,7 +97,7 @@ body::-webkit-scrollbar-thumb {
   align-items: flex-start;
   gap: 50px;
   position: absolute;
-  left: -200px;
+  left: -100px;
   top: 35%;
   transform: translateY(-50%);
 }
@@ -136,7 +136,7 @@ canvas {
   position: absolute;
   top: -15px;
   left: 49%;
-  transform: translateX(-50%);
+  transform: translateX(-40%);
   width: 0;
   height: 0;
   border-left: 18px solid transparent;
@@ -150,14 +150,14 @@ canvas {
    INFO (debajo de la ruleta)
    =============================== */
 .info {
-  margin-top: 5px;
+  margin-top: 65px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   width: 100%;
   font-size: 1.5em;
-  transform: translateX(75px);
+  transform: translateX(180px);
 }
 
 .category {
@@ -182,7 +182,7 @@ canvas {
    PANEL DERECHO
    =============================== */
 .right-panel {
-  flex: 1;
+  flex: 5;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -191,19 +191,23 @@ canvas {
 
 .summary {
   text-align: center;
+  width: 100%;
+  max-width: 350px;
 }
 
 .summary h3 {
   color: var(--secondary);
   margin-bottom: 10px;
   font-size: 2em;
-  transform: translateX(55px);
+  transform: translateX(250px);
+  text-align: center;
 }
 
 .summary div {
   font-size: 1.5em;
   line-height: 1.8;
-  transform: translateX(55px);
+  transform: translateX(250px);
+  text-align: center;
 }
 
 /* ===============================
@@ -229,13 +233,13 @@ canvas {
 
 .big-result h1 {
   color: var(--secondary);
-  font-size: 60px;
+  font-size: 80px;
   margin-bottom: 20px;
 }
 
 .big-result p {
-  font-size: 40px;
-  margin-bottom: 600px;
+  font-size: 50px;
+  margin-bottom: 300px;
   text-align: center;
   max-width: 80%;
 }
@@ -244,8 +248,8 @@ canvas {
   background: var(--primary);
   color: #fff;
   border: none;
-  padding: 10px 25px;
-  border-radius: 15px;
+  padding: 20px 25px;
+  border-radius: 50px;
   font-size: 30px;
   cursor: pointer;
   transition: 0.3s;

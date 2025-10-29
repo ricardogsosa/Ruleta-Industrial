@@ -72,7 +72,7 @@ function drawWheel() {
     ctx.rotate(i * angle + angle / 2);
     ctx.textAlign = "right";
     ctx.fillStyle = "#fff";
-    ctx.font = "bold 20px Arial";
+    ctx.font = "bold 30px Arial";
     ctx.fillText(classes[i], r - 20, 5);
     ctx.restore();
   }
@@ -81,27 +81,30 @@ function drawWheel() {
 // ===============================
 // ANIMACIÓN DE GIRO
 // ===============================
+// ===============================
+// ANIMACIÓN DE GIRO (ajustada)
+// ===============================
+// ===============================
+// ANIMACIÓN DE GIRO (ajustada)
+// ===============================
 function spinWheel() {
-  if (spinning || !classes.length) return; // Evita giros dobles
+  if (spinning || !classes.length) return;
   spinning = true;
 
-  // Cálculo aleatorio del giro
-  const spins = Math.random() * 6 + 8; // Número de vueltas
-  const extra = Math.random() * angle;  // Ángulo adicional
+  const spins = Math.random() * 6 + 8;
+  const extra = Math.random() * angle;
   const finalAngle = spins * 2 * Math.PI + extra;
-  const dur = 4000; // Duración en milisegundos (4 segundos)
+  const dur = 4000;
   const start = performance.now();
 
   function anim(t) {
     let e = t - start;
     if (e > dur) e = dur;
 
-    // Easing (animación suave)
     const p = e / dur;
     const es = 1 - Math.pow(1 - p, 3);
     const ang = finalAngle * es;
 
-    // Dibuja el giro
     ctx.save();
     ctx.translate(c, c);
     ctx.rotate(ang);
@@ -109,30 +112,41 @@ function spinWheel() {
     drawWheel();
     ctx.restore();
 
-    // Continúa o finaliza animación
     if (e < dur) {
       requestAnimationFrame(anim);
     } else {
       spinning = false;
- const actualAngle = finalAngle % (2 * Math.PI);
 
-// 🔹 La flecha está ARRIBA (12 en punto), pero actualmente toma el de ABAJO.
-// Por eso giramos la referencia 180° (Math.PI)
-const pointerAngle = -Math.PI / 2; // posición arriba
+      // calculamos el ángulo final efectivo de la ruleta (en 0..2π)
+      const actualAngle = (finalAngle % (2 * Math.PI));
 
-// 🔹 Calculamos qué sector quedó bajo la flecha
-const adjusted = (pointerAngle - actualAngle + 2 * Math.PI) % (2 * Math.PI);
+      // ángulo de la flecha en coordenadas globales (arriba)
+      const pointerAngle = -Math.PI / 2;
 
-// 🔹 Determinamos el índice correcto del sector ganador
-const idx = Math.floor(adjusted / angle) % num;
+      // --- 🔧 Cálculo robusto y seguro ---
+      let localAngle = (pointerAngle - actualAngle) % (2 * Math.PI);
+      if (localAngle < 0) localAngle += 2 * Math.PI; // ✅ Corrige negativos
+      let idx = Math.floor(localAngle / angle);
 
-// 🔹 Mostramos la pregunta de esa categoría
-showQ(idx);
-// Muestra pregunta de la categoría ganadora
+      // seguridad extra (por si cae justo en el borde)
+      if (idx >= num) idx = num - 1;
+
+      // debug opcional (puedes borrar después)
+      const deg = a => (a * 180 / Math.PI).toFixed(1);
+      console.log("finalAngle(rad):", actualAngle.toFixed(3), "deg:", deg(actualAngle));
+      console.log("localAngle(rad):", localAngle.toFixed(3), "deg:", deg(localAngle));
+      console.log("angle sector(rad):", angle.toFixed(3), "=> índice:", idx, "->", classes[idx]);
+
+      // mostrar pregunta del sector correcto
+      showQ(idx);
     }
   }
+
   requestAnimationFrame(anim);
 }
+
+
+
 
 // ===============================
 // MOSTRAR PREGUNTA
